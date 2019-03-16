@@ -6,9 +6,10 @@ const http = require('http');
 const request = require('request-promise-native');
 const requestHeaders = require('./shared/request-headers');
 
-const WTT_GUILD_ID = '156528442446184448';
+const BEEFY_GUILD_ID = '106690445328855040';
 const TEST_GUILD_ID = '283748334311571457';
-const allowedGuilds = [TEST_GUILD_ID, WTT_GUILD_ID];
+const WTT_GUILD_ID = '156528442446184448';
+const allowedGuilds = [BEEFY_GUILD_ID, TEST_GUILD_ID, WTT_GUILD_ID];
 
 const EMOJI_NAME = 'verified';
 const reporter = new Reporter();
