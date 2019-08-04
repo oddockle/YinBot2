@@ -1,6 +1,6 @@
-const Discord = require('discord.js');
-const PluginManager = require('./plugin-manager.js');
-const path = require('path');
+const Discord = require('discord.js')
+const PluginManager = require('./plugin-manager.js')
+const path = require('path')
 
 // var S = require("string");
 // var catte = require("cat-ascii-faces");
@@ -9,20 +9,18 @@ const path = require('path');
 // var urban = require("urban");
 // var gizoogle = require("gizoogle");
 
-const config = require('./config');
+const config = require('./config')
 
 // Absolute filepath of the directory housing Yinbot.js
-global.__rootdir = path.resolve(__dirname);
+global.__rootdir = path.resolve(__dirname)
 
 const client = new Discord.Client();
 
 (async function() {
-  client.on('ready', () => console.log(`Logged in as ${client.user.tag}`));
-
-  await client.login(config.token);
-
-  PluginManager.init(client);
-})();
+  client.on('ready', () => console.log(`Logged in as ${client.user.tag}`))
+  await client.login(config.token)
+  PluginManager.init(client)
+})()
 
 /*************************************/
 /* Old Stuff from the Discordie Days */
@@ -392,8 +390,8 @@ const client = new Discord.Client();
 
 process.on('uncaughtException', function(err) {
   if (err.code !== 'ECONNRESET') {
-    throw err;
+    throw err
   } else {
-    console.error(err);
+    console.error(err)
   }
-});
+})
